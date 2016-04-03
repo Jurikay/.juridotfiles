@@ -10,7 +10,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gentoo"
+ZSH_THEME="juri"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -31,7 +31,7 @@ DISABLE_LS_COLORS="false"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -50,7 +50,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting colored-man colorize osx terminalapp compleat cp brew brew-cask z nvm)
+#plugins=(git zsh-syntax-highlighting colored-man colorize osx terminalapp compleat cp brew brew-cask z nvm)
 
 # User configuration
 
@@ -96,7 +96,10 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 #export NVM_DIR=~/.nvm
 #  . $(brew --prefix nvm)/nvm.sh
 
-export PATH=/Users/jurekbaumann/.nvm/versions/node/v5.6.0/bin/:$PATH
+#export PATH=/Users/jurekbaumann/.nvm/versions/node/v5.6.0/bin:$PATH
 
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+# activate torch if it is installed
+if which ~/torch/install/bin/th > /dev/null; then . ~/torch/install/bin/torch-activate; fi
